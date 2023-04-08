@@ -11,16 +11,16 @@ To use the tool, simply visit the [GitGittu website](https://shrudra.github.io/g
 ## Screenshots
 
 ### Repositories
-![Repositories](screenshots/repositories.png)
+![Repositories](screenshots/repositories.jpeg)
 
 ### Gists
-![Gists](screenshots/gists.png)
+![Gists](screenshots/gists.jpeg)
 
 ### Followers
-![Followers](screenshots/followers.png)
+![Followers](screenshots/followers.jpeg)
 
 ### Following
-![Following](screenshots/following.png)
+![Following](screenshots/following.jpeg)
 
 ## Development
 
