@@ -1,5 +1,7 @@
 # GitGittu
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 GitGittu is a simple tool that allows users to view their GitHub repositories, gists, followers, and following. The tool is built with JavaScript and utilizes the GitHub REST API.
 
 ## Usage
@@ -47,6 +49,9 @@ If you want to make modifications to GitGittu, you can clone the GitHub reposito
 ## Contribute
 
 If you find any bugs or want to contribute to the project, feel free to submit an issue or pull request.
+
+## License
+My Tool is licensed under the MIT License. See <a href="LICENSE.txt">LICENSE</a> for more information.
 
 ## Contact
 
