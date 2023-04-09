@@ -40,7 +40,7 @@ document.querySelector('#submit-btn').addEventListener('click', () => {
 
 document.querySelector('#submit-btn2').addEventListener('click', () => {
   const username = document.querySelector('#username').value.trim();
-  fetchData(username, 'gists', ['filename', 'html_url', 'created_at']);
+  fetchData(username, 'gists', ['html_url', 'created_at']);
 });
 
 document.querySelector('#submit-btn3').addEventListener('click', () => {
