@@ -51,7 +51,7 @@ If you want to make modifications to GitGittu, you can clone the GitHub reposito
 If you find any bugs or want to contribute to the project, feel free to submit an issue or pull request.
 
 ## License
-My Tool is licensed under the MIT License. See <a href="LICENSE.txt">LICENSE</a> for more information.
+My Tool is licensed under the MIT License. See <a href="LICENSE">LICENSE</a> for more information.
 
 ## Contact
 
