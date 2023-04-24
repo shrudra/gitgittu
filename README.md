@@ -34,7 +34,7 @@ If you want to make modifications to GitGittu, you can clone the GitHub reposito
 
 2. Open the index.html file in your browser to view the current version of the tool.
 
-3. Make any changes you want to the JavaScript code in the script.js file.
+3. Make any changes you want to the JavaScript code in the main.js file.
 
 4. Test your changes by refreshing the index.html file in your browser.
 
