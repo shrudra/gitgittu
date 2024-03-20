@@ -50,6 +50,11 @@ If you want to make modifications to GitGittu, you can clone the GitHub reposito
 
 If you find any bugs or want to contribute to the project, feel free to submit an issue or pull request.
 
+# Donate 
+If you find value in what I'm creating,‌ a book donation would be a great choice.
+
+<a href="https://www.buymeacoffee.com/shrudra" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20book&emoji=📖&slug=shrudra&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Book" style="height: auto !important;width: auto !important;" ></a>
+
 ## License
 My Tool is licensed under the MIT License. See <a href="LICENSE">LICENSE</a> for more information.
 
