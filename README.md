@@ -22,6 +22,10 @@ To use the tool, simply visit the [GitGittu website](https://shrudra.github.io/g
 ### Following
 ![Following](screenshots/following.jpeg)
 
+## Star ⭐ History
+
+![Star History Chart](https://api.star-history.com/svg?repos=shrudra/gitgittu&type=date)
+
 ## Development
 
 If you want to make modifications to GitGittu, you can clone the GitHub repository and make changes locally. Here are the steps to do so:
