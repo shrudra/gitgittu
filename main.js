@@ -1,22 +1,13 @@
-const END_POINTS = {
-  FOLLOWERS: 'followers',
-  FOLLOWING: 'following',
-  GISTS: 'gists',
-  REPOS: 'repos'
-};
-
-const URL = 'https://api.github.com/users/';
-
 const fetchData = (username, endpoint, columns) => {
-  return fetch(`${URL}${username}/${endpoint}`)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      let statusHTML = '<tr>';
+  const request = new XMLHttpRequest();
+  request.open('GET', `https://api.github.com/users/${username}/${endpoint}`, true);
+  
+  request.onload = () => {
+    const data = JSON.parse(request.response);
+    
+    if (request.status >= 200 && request.status < 400) {
+      let statusHTML = '';
+      statusHTML += '<tr>';
       columns.forEach(column => {
         statusHTML += `<th>${column}</th>`;
       });
@@ -34,54 +25,30 @@ const fetchData = (username, endpoint, columns) => {
         });
         statusHTML += '</tr>';
       });
-      return statusHTML;
-    })
-    .catch(error => {
-      return Promise.reject('User not found or an error occurred');
-    });
-};
+      document.querySelector('tbody').innerHTML = statusHTML;
+    } else {
+      document.querySelector('tbody').innerHTML = '<tr><td class="text-center">User not found or an error occurred</td></tr>';
+    }
+  }
+  request.send();
+}
 
-// Example usage with promises
 document.querySelector('#submit-btn').addEventListener('click', () => {
   const username = document.querySelector('#username').value.trim();
-  fetchData(username, END_POINTS.REPOS, ['full_name', 'language', 'html_url'])
-    .then(html => {
-      document.querySelector('tbody').innerHTML = html;
-    })
-    .catch(error => {
-      document.querySelector('tbody').innerHTML = `<tr><td class="text-center">${error}</td></tr>`;
-    });
+  fetchData(username, 'repos', ['full_name', 'language', 'html_url']);
 });
 
 document.querySelector('#submit-btn2').addEventListener('click', () => {
   const username = document.querySelector('#username').value.trim();
-  fetchData(username, END_POINTS.GISTS, ['html_url', 'created_at'])
-    .then(html => {
-      document.querySelector('tbody').innerHTML = html;
-    })
-    .catch(error => {
-      document.querySelector('tbody').innerHTML = `<tr><td class="text-center">${error}</td></tr>`;
-    });
+  fetchData(username, 'gists', ['html_url', 'created_at']);
 });
 
 document.querySelector('#submit-btn3').addEventListener('click', () => {
   const username = document.querySelector('#username').value.trim();
-  fetchData(username, END_POINTS.FOLLOWING, ['avatar_url', 'login', 'html_url'])
-    .then(html => {
-      document.querySelector('tbody').innerHTML = html;
-    })
-    .catch(error => {
-      document.querySelector('tbody').innerHTML = `<tr><td class="text-center">${error}</td></tr>`;
-    });
+  fetchData(username, 'following', ['avatar_url', 'login', 'html_url']);
 });
 
 document.querySelector('#submit-btn4').addEventListener('click', () => {
   const username = document.querySelector('#username').value.trim();
-  fetchData(username, END_POINTS.FOLLOWING, ['avatar_url', 'login', 'html_url'])
-    .then(html => {
-      document.querySelector('tbody').innerHTML = html;
-    })
-    .catch(error => {
-      document.querySelector('tbody').innerHTML = `<tr><td class="text-center">${error}</td></tr>`;
-    });
+  fetchData(username, 'followers', ['avatar_url', 'login', 'html_url']);
 });
